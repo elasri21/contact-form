@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <div class="container">
+      <h1>Contact us</h1>
+      <form action="index.html" novalidate>
+        <div class="form-control width-50">
+          <label for="first-name">first name <span class="star">*</span></label>
+          <input type="text" class="field" id="first-name" name="first-name" placeholder="first name">
+          <span class="error empty-field first-name-error">This field is required</span>
+        </div>
+        <div class="form-control width-50 last">
+          <label for="last-name">last name <span class="star">*</span></label>
+          <input type="text" class="field" id="last-name" name="last-name" placeholder="last name">
+          <span class="error empty-field last-name-error">This field is required</span>
+        </div>
+        <div class="form-control">
+          <label for="email">email address <span class="star">*</span></label>
+          <input type="email" class="field" id="email" name="email" placeholder="example@gmail.com">
+          <span class="error not-valid">This field is required</span>
+          <!-- <span class="error empty-field email-error">This field is required</span> -->
+        </div>
+        <div class="form-control">
+          <span class="label">Query Type <span class="star">*</span></span>
+          <label class="radio-box">
+            <input type="radio" id="general-enquiry" name="query">
+            <span>General Enquiry</span>
+          </label>
+          <label class="radio-box last">
+            <input type="radio" id="support-request" name="query">
+            <span>Support Request</span>
+          </label>
+          <span class="error choose-query">Please select a query type</span>
+        </div>
+        <div class="form-control">
+          <label for="message">Message <span class="star">*</span></label>
+          <textarea class="field" name="message" id="message" placeholder="message"></textarea>
+          <span class="error message-error">This field is required</span>
+        </div>
+        <div class="form-control">
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox"> I consent to being contacted by the team <span class="star">*</span>
+            <span class="error consent">To submit this form, please consent to being contacted</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <input class="submit" type="submit" value="submit">
+        </div>
+      </form>
+      <div class="success">
+        <h3>
+          <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+          <span class="text">Message Sent!</span>
+        </h3>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/elasri21" target="_blank">elasri21</a>.
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

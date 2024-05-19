@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Satisfy&display=swap");
+/* global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #dff1e7;
+}
+
+main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .container {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+main .container h1 {
+  text-transform: capitalize;
+  color: #2b4246;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  main .container form .form-control.width-50 {
+    display: inline-block;
+    width: calc(50% - 15px);
+  }
+  main .container form .form-control.width-50.last {
+    margin-left: 26px;
+  }
+}
+main .container form .form-control label, main .container form .form-control .label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #87a3a6;
+}
+main .container form .form-control label .star, main .container form .form-control .label .star {
+  color: #0c7d69;
+}
+main .container form .form-control input, main .container form .form-control textarea {
+  display: inline-block;
+  outline: none;
+  border: 1px solid transparent;
+  background: none;
+  border-radius: 6px;
+  transition: .3s linear;
+  font-size: 16px;
+  color: #87a3a6;
+  caret-color: #0c7d69;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+main .container form .form-control input.field, main .container form .form-control textarea.field {
+  border-color: #87a3a6;
+  width: 100%;
+}
+main .container form .form-control input.field::placeholder, main .container form .form-control textarea.field::placeholder {
+  text-transform: capitalize;
+  transition: opacity .3s linear;
+}
+main .container form .form-control input.field:focus, main .container form .form-control textarea.field:focus {
+  border-color: #0c7d69;
+}
+main .container form .form-control input.field:focus::placeholder, main .container form .form-control textarea.field:focus::placeholder {
+  opacity: 0;
+}
+main .container form .form-control input.submit, main .container form .form-control textarea.submit {
+  background-color: #0c7d69;
+  border-color: #0c7d69;
+  width: 100%;
+  text-transform: capitalize;
+  color: white;
+  text-align: center;
+}
+main .container form .form-control input.submit:hover, main .container form .form-control textarea.submit:hover {
+  background-color: #095d4d;
+}
+main .container form .form-control textarea {
+  resize: none;
+}
+main .container form .form-control .radio-box {
+  position: relative;
+  border: 1px solid #87a3a6;
+  background-color: white;
+  border-radius: 6px;
+  transition: .3s linear;
+  font-size: 16px;
+  color: #87a3a6;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  main .container form .form-control .radio-box {
+    display: inline-block;
+    width: calc(50% - 15px);
+  }
+  main .container form .form-control .radio-box.last {
+    margin-left: 26px;
+    margin-top: 0 !important;
+  }
+}
+main .container form .form-control .radio-box input {
+  opacity: 0;
+}
+main .container form .form-control .radio-box.last {
+  margin-top: 10px;
+}
+main .container form .form-control .radio-box::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0c7d69;
+  outline: 1px solid #0c7d69;
+  outline-offset: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+main .container form .form-control .radio-box:has(input[type="radio"]:checked) {
+  border-color: #0c7d69;
+  background-color: #dff1e7;
+}
+main .container form .form-control .radio-box:has(input[type="radio"]:checked)::before {
+  opacity: 1;
+}
+main .container form .form-control .checkbox {
+  position: relative;
+  padding-left: 25px;
+}
+main .container form .form-control .checkbox input {
+  opacity: 0;
+  position: fixed;
+  left: -100%;
+}
+main .container form .form-control .checkbox::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  width: 13px;
+  height: 13px;
+  border-radius: 1px;
+  color: white;
+  background-color: white;
+  border: 2px solid #87a3a6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color .3s linear;
+}
+main .container form .form-control .checkbox:has(input[type="checkbox"]:checked)::before {
+  background-color: #0c7d69;
+  border-color: #0c7d69;
+}
+main .container form .form-control .error {
+  font-size: 16px;
+  font-weight: 200;
+  color: #d94545;
+  text-align: left;
+  opacity: 0;
+}
+main .container form .form-control .error.consent {
+  display: block;
+  margin-left: -25px;
+}
+main .container form .form-control .error.show {
+  opacity: 1;
+}
+main .container .success {
+  width: fit-content;
+  padding: 15px 20px;
+  background-color: #2b4246;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top .3s linear;
+  top: -100%;
+}
+main .container .success.show {
+  top: 10px;
+}
+main .container .success h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+main .container .success p {
+  font-size: 15px;
+  color: #87a3a6;
+}
+
+/* global rules */
+/* footer rules*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/* footer rules*/
+
+/*# sourceMappingURL=main.css.map */
